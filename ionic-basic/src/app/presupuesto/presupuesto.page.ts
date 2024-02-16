@@ -32,8 +32,7 @@ export class PresupuestoPage implements OnInit {
 
   guardar() {
     this.resultados = "";
-    if (this.monto != null && this.tipoGasto != null && this.monto > 0)
-    {
+    if (this.monto != null && this.tipoGasto != null && this.monto > 0) {
       this.colorResultados = "success";
       this.resultados = "Tipo de gasto: " + this.tipoGasto +
         "\nMonto: " + this.monto + "\n";
@@ -43,8 +42,7 @@ export class PresupuestoPage implements OnInit {
       this.gastosList = this.presupuestoService.mostrarGastos();
       this.limpiarCampos();
     }
-    else
-    {
+    else {
       this.colorResultados = "danger";
       this.resultados = "No ha llenado todos lso campos del formulario necesarios";
     }
